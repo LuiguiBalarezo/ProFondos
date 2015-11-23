@@ -1,0 +1,25 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="back_input_login">
+        <item name="android:background">@drawable/back_inputs_login</item>
+        <item name="android:padding">3dp</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="back_v">
+        <item name="android:background">@android:color/background_light</item>
+    </style>
+
+    <style name="back_i_have_a_count">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@android:color/background_light</item>
+    </style>
+
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="back_input_login_land" parent="back_input_login">
+    </style>
+    <style name="back_v_land" parent="back_v">
+        <item name="android:background">@android:color/background_light</item>
+    </style>
+    <style name="back_i_have_a_count_land" parent="back_i_have_a_count">
+        <item name="android:textColor">@android:color/background_light</item>
+    </style>
+</resources>
