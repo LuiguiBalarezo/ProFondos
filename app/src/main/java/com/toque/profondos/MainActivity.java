@@ -3,16 +3,23 @@ package com.toque.profondos;
 import android.app.Activity;
 import android.app.FragmentTransaction;
 import android.content.Context;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.socks.library.KLog;
+
+import rx.Observable;
+import rx.functions.Action1;
+
 public class MainActivity extends AppCompatActivity {
+
 
     private static final String TAG = "MainActivity";
     public static Context mContext;
@@ -46,7 +53,19 @@ public class MainActivity extends AppCompatActivity {
         /*Initialize control*/
         initToolbar();
 
+        hello("Ben", "George");
+
     }
+
+    public static void hello(String... names) {
+        Observable.from(names).subscribe(new Action1<String>() {
+            @Override
+            public void call(String s) {
+
+            }
+        });
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -69,8 +88,6 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
-
 
     //<editor-fold desc="METHODS">
 //    public static void setShowToolBar(boolean b, CharSequence s) {

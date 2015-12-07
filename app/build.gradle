@@ -11,8 +11,24 @@ android {
         versionCode 1
         versionName "1.0"
     }
+
+    dataBinding {
+        enabled = true
+    }
+
     buildTypes {
+
+        //<editor-fold desc="Config Debug for Library KLog">
+        debug {
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            minifyEnabled false
+        }
+        //</editor-fold>
+
         release {
+            //<editor-fold desc="Config Debug for Library KLog">
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            //</editor-fold>
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
@@ -26,7 +42,7 @@ dependencies {
 
     compile 'io.reactivex:rxjava:1.0.10'
 
-    //<editor-fold desc="LogColor">
+    //<editor-fold desc="KLog Format">
     compile 'com.github.zhaokaiqiang.klog:library:1.1.0'
     //</editor-fold>
 }
